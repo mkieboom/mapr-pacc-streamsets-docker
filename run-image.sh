@@ -13,3 +13,4 @@ docker run -it \
 -e MAPR_MOUNT_PATH=/mapr \
 -p 18630:18630 \
 mkieboom/mapr-pacc-streamsets-docker
+
