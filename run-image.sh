@@ -15,7 +15,7 @@ docker run -it \
 --cap-add SYS_RESOURCE \
 --device /dev/fuse \
 -e MAPR_CLUSTER=demo.mapr.com \
--e MAPR_CLDB_HOSTS=172.16.4.179 \
+-e MAPR_CLDB_HOSTS=192.168.1.11 \
 -e MAPR_CONTAINER_USER=mapr \
 -e MAPR_CONTAINER_GROUP=mapr \
 -e MAPR_CONTAINER_UID=5000 \
