@@ -20,3 +20,10 @@ docker run -it \
 -p 18630:18630 \
 mkieboom/mapr-pacc-streamsets-docker
 
+# For secure clusters, genarate a ticket and provide the ticket to docker run:
+# -v $PWD/mapr-ticket:/tmp/longlived_ticket:ro \
+# -e MAPR_TICKETFILE_LOCATION=/tmp/longlived_ticket \
+
+echo ""
+echo "Streamsets pipelines persisted to: $PWD/$SDC_DATA"
+echo ""
