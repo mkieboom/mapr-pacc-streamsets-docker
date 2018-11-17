@@ -9,6 +9,12 @@ MapR Persistent Application Client Container (PACC) running StreamSets DataColle
 ## Pre-requisites
 A MapR cluster (v6.0.0 or later) and Docker.
 
+### Clone the project
+```
+git clone https://github.com/mkieboom/mapr-pacc-streamsets-docker
+cd mapr-pacc-streamsets-docker
+```
+
 ## Running the container
 Modify the 'run-image.sh' script to reflect your MapR cluster configuration.
 ```
@@ -40,12 +46,6 @@ streamsets-datacollector-azure-lib
 
 To add additional stage libraries, add them to the Dockerfile. For a complete list of StreamSets Stage Libraries please visit:
 https://streamsets.com/documentation/datacollector/latest/help/datacollector/UserGuide/Installation/AddtionalStageLibs.html#concept_evs_xkm_s5
-
-### Clone the project
-```
-git clone https://github.com/mkieboom/mapr-pacc-streamsets-docker
-cd mapr-pacc-streamsets-docker
-```
 
 ## Build the container
 ```
