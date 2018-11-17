@@ -17,7 +17,6 @@ bash run-image.sh
 ```
 
 For a list of available container versions please visit:
-
 https://hub.docker.com/r/mkieboom/mapr-pacc-streamsets-docker/tags/
 
 #### Pre-Installed StreamSets Stage Libraries
