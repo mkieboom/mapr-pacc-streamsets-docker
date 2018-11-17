@@ -12,10 +12,12 @@ A MapR cluster and Docker.
 #### Running the container
 Modify the 'run-image.sh' script to reflect your MapR cluster configuration.
 ```
+vi run-image.sh
 bash run-image.sh
 ```
 
 For a list of available container versions please visit:
+
 https://hub.docker.com/r/mkieboom/mapr-pacc-streamsets-docker/tags/
 
 #### Pre-Installed StreamSets Stage Libraries
