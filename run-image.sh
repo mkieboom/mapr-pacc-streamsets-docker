@@ -7,7 +7,7 @@ mkdir $SDC_DATA
 # Specify the container version tag. Versions available:
 # streamsets352_mapr600_mep400
 # streamsets352_mapr601_mep500 (latest)
-COINTAINER_VERSION=streamsets352_mapr601_mep500
+COINTAINER_VERSION=latest
 
 # Launch the Streamsets container based on MapR PACC
 docker run -it \
