@@ -20,7 +20,9 @@
 #
 
 FROM maprtech/pacc:6.0.1_5.0.0_centos7
-MAINTAINER Paul Curtis <pcurtis@mapr.com>
+
+MAINTAINER mkieboom at mapr.com
+# Based on the original version by Paul Curtis <pcurtis@mapr.com>
 
 # MapR variables
 ENV MAPR_VERSION=6.0.1 \
@@ -28,10 +30,22 @@ ENV MAPR_VERSION=6.0.1 \
     MAPR_HOME=/opt/mapr/
 
 # Streamsets variables
-ENV STREAMSETS_VERSION=3.5.2 \
-    STREAMSETS_STAGELIBS=streamsets-datacollector-mapr_6_0-lib,streamsets-datacollector-mapr_6_0-mep5-lib
+ENV STREAMSETS_VERSION=3.5.2
 
-#STREAMSETS_STAGELIBS=streamsets-datacollector-mapr_6_0-lib
+# Streamsets Stagelibs
+ENV STREAMSETS_LIBS_MAPR=${STREAMSETS_LIBS_MAPR},streamsets-datacollector-mapr_6_0-lib
+ENV STREAMSETS_LIBS_MAPR=${STREAMSETS_LIBS_MAPR},streamsets-datacollector-mapr_6_0-mep5-lib
+
+ENV STREAMSETS_LIBS_CORE=${STREAMSETS_LIBS_CORE},streamsets-datacollector-dataformats-lib
+ENV STREAMSETS_LIBS_CORE=${STREAMSETS_LIBS_CORE},streamsets-datacollector-jdbc-lib
+ENV STREAMSETS_LIBS_CORE=${STREAMSETS_LIBS_CORE},streamsets-datacollector-jython_2_7-lib
+
+ENV STREAMSETS_LIBS_CLOUD=${STREAMSETS_LIBS_CLOUD},streamsets-datacollector-google-cloud-lib
+ENV STREAMSETS_LIBS_CLOUD=${STREAMSETS_LIBS_CLOUD},streamsets-datacollector-aws-lib
+ENV STREAMSETS_LIBS_CLOUD=${STREAMSETS_LIBS_CLOUD},streamsets-datacollector-azure-lib
+
+ENV STREAMSETS_STAGELIBS=${STREAMSETS_LIBS_MAPR},${STREAMSETS_LIBS_CORE},${STREAMSETS_LIBS_CLOUD}
+
 
 ENV SDC_USER=sdc
 ENV SDC_URL=https://archives.streamsets.com/datacollector/${STREAMSETS_VERSION}/tarball/streamsets-datacollector-core-${STREAMSETS_VERSION}.tgz

@@ -2,7 +2,7 @@
 
 # Check if the /mapr/clustername mountpoint is available
 if [ "$(sudo ls /mapr/ |wc -l)" -eq 0 ]; then
-  echo "MapR not running. exiting."
+  echo "MapR mountpoint not available. Check cluster config. Exiting now."
   exit
 else
   # Echo config
