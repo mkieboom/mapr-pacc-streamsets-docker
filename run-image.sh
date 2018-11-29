@@ -9,7 +9,7 @@ mkdir $SDC_DATA
 # streamsets352_mapr601_mep500
 # streamsets360_mapr600_mep400
 # streamsets360_mapr601_mep500 (latest)
-COINTAINER_VERSION=streamsets360_mapr601_mep500
+CONTAINER_VERSION=streamsets360_mapr601_mep500
 
 # Launch the Streamsets container based on MapR PACC
 docker run -it \
@@ -25,7 +25,7 @@ docker run -it \
 -e MAPR_MOUNT_PATH=/mapr \
 -v $PWD/sdc-data:/data \
 -p 18630:18630 \
-mkieboom/mapr-pacc-streamsets-docker:$COINTAINER_VERSION
+mkieboom/mapr-pacc-streamsets-docker:$CONTAINER_VERSION
 
 # For secure clusters, genarate a ticket and provide the ticket to docker run:
 # -v $PWD/mapr-ticket:/tmp/longlived_ticket:ro \
