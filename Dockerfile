@@ -30,7 +30,7 @@ ENV MAPR_VERSION=6.0.1 \
     MAPR_HOME=/opt/mapr/
 
 # Streamsets variables
-ENV STREAMSETS_VERSION=3.5.2
+ENV STREAMSETS_VERSION=3.6.0
 
 # Streamsets Stagelibs
 ENV STREAMSETS_LIBS_MAPR=${STREAMSETS_LIBS_MAPR},streamsets-datacollector-mapr_6_0-lib

@@ -6,8 +6,10 @@ mkdir $SDC_DATA
 
 # Specify the container version tag. Versions available:
 # streamsets352_mapr600_mep400
-# streamsets352_mapr601_mep500 (latest)
-COINTAINER_VERSION=streamsets352_mapr601_mep500
+# streamsets352_mapr601_mep500
+# streamsets360_mapr600_mep400
+# streamsets360_mapr601_mep500 (latest)
+COINTAINER_VERSION=streamsets360_mapr601_mep500
 
 # Launch the Streamsets container based on MapR PACC
 docker run -it \
@@ -15,7 +17,7 @@ docker run -it \
 --cap-add SYS_RESOURCE \
 --device /dev/fuse \
 -e MAPR_CLUSTER=demo.mapr.com \
--e MAPR_CLDB_HOSTS=172.16.4.179 \
+-e MAPR_CLDB_HOSTS=192.168.1.11 \
 -e MAPR_CONTAINER_USER=mapr \
 -e MAPR_CONTAINER_GROUP=mapr \
 -e MAPR_CONTAINER_UID=5000 \
