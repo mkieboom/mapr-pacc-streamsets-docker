@@ -8,8 +8,9 @@ mkdir $SDC_DATA
 # streamsets352_mapr600_mep400
 # streamsets352_mapr601_mep500
 # streamsets360_mapr600_mep400
-# streamsets360_mapr601_mep500 (latest)
-CONTAINER_VERSION=streamsets360_mapr601_mep500
+# streamsets360_mapr601_mep500
+# streamsets372_mapr601_mep500 (latest)
+CONTAINER_VERSION=streamsets372_mapr601_mep500
 
 # Launch the Streamsets container based on MapR PACC
 docker run -it \
