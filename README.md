@@ -7,7 +7,7 @@ Not for production use and not officially supported by MapR Technologies.
 MapR Persistent Application Client Container (PACC) running StreamSets DataCollector (SDC). This pre-build container running StreamSets allows you to launch pipelines against a MapR cluster immediately.
 
 ## Pre-requisites
-A MapR cluster (v6.0.0 or later) and Docker.
+A MapR cluster (v6.1.0 or later) and Docker.
 
 ### Clone the project
 ```
@@ -30,8 +30,8 @@ The container comes with the following Stage Libraries pre-installed:
 
 ```
 # StreamSets Stage Libraries for MapR:
-streamsets-datacollector-mapr_6_0-lib
-streamsets-datacollector-mapr_6_0-mep5-lib
+streamsets-datacollector-mapr_6_1-lib
+streamsets-datacollector-mapr_6_1-mep6-lib
 
 # StreamSets Stage Libraries for generic:
 streamsets-datacollector-dataformats-lib

@@ -9,8 +9,9 @@ mkdir $SDC_DATA
 # streamsets352_mapr601_mep500
 # streamsets360_mapr600_mep400
 # streamsets360_mapr601_mep500
-# streamsets372_mapr601_mep500 (latest)
-CONTAINER_VERSION=streamsets372_mapr601_mep500
+# streamsets372_mapr601_mep500
+# streamsets381_mapr610_mep600 (latest)
+CONTAINER_VERSION=streamsets381_mapr610_mep600
 
 # Launch the Streamsets container based on MapR PACC
 docker run -it \
@@ -26,11 +27,9 @@ docker run -it \
 -e MAPR_MOUNT_PATH=/mapr \
 -v $PWD/sdc-data:/data \
 -p 18630:18630 \
+-v $PWD/mapr-ticket:/tmp/longlived_ticket:ro \
+-e MAPR_TICKETFILE_LOCATION=/tmp/longlived_ticket \
 mkieboom/mapr-pacc-streamsets-docker:$CONTAINER_VERSION
-
-# For secure clusters, genarate a ticket and provide the ticket to docker run:
-# -v $PWD/mapr-ticket:/tmp/longlived_ticket:ro \
-# -e MAPR_TICKETFILE_LOCATION=/tmp/longlived_ticket \
 
 echo ""
 echo "Streamsets pipelines persisted to: $PWD/$SDC_DATA"
