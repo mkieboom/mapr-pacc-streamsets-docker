@@ -19,22 +19,22 @@
 #
 #
 
-FROM maprtech/pacc:6.0.1_5.0.0_centos7
+FROM maprtech/pacc:6.1.0_6.0.0_centos7
 
 MAINTAINER mkieboom at mapr.com
 # Based on the original version by Paul Curtis <pcurtis@mapr.com>
 
 # MapR variables
-ENV MAPR_VERSION=6.0.1 \
-    MAPR_MEP_VERSION=5 \
+ENV MAPR_VERSION=6.1.0 \
+    MAPR_MEP_VERSION=6 \
     MAPR_HOME=/opt/mapr/
 
 # Streamsets variables
-ENV STREAMSETS_VERSION=3.7.2
+ENV STREAMSETS_VERSION=3.8.1
 
 # Streamsets Stagelibs
-ENV STREAMSETS_LIBS_MAPR=${STREAMSETS_LIBS_MAPR},streamsets-datacollector-mapr_6_0-lib
-ENV STREAMSETS_LIBS_MAPR=${STREAMSETS_LIBS_MAPR},streamsets-datacollector-mapr_6_0-mep5-lib
+ENV STREAMSETS_LIBS_MAPR=${STREAMSETS_LIBS_MAPR},streamsets-datacollector-mapr_6_1-lib
+ENV STREAMSETS_LIBS_MAPR=${STREAMSETS_LIBS_MAPR},streamsets-datacollector-mapr_6_1-mep6-lib
 
 ENV STREAMSETS_LIBS_CORE=${STREAMSETS_LIBS_CORE},streamsets-datacollector-dataformats-lib
 ENV STREAMSETS_LIBS_CORE=${STREAMSETS_LIBS_CORE},streamsets-datacollector-jdbc-lib
